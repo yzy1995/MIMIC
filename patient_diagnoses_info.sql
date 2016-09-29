@@ -1,0 +1,1 @@
+SELECT ie.subject_id, ie.hadm_id, ie.icustay_id,diag.SEQ_NUM,diag.icd9_code, ddiag.long_title FROM mimiciii.icustays ie INNER JOIN mimiciii.diagnoses_icd diag ON ie.subject_id = diag.subject_id INNER JOIN mimiciii.d_icd_diagnoses ddiag ON diag.icd9_code = ddiag.icd9_code WHERE ie.subject_id = "+num+";
